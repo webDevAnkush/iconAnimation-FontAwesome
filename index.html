@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Icon Animation with font awesome</title>
+  <!-- Include Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Center align and font size -->
+  <style media="screen">
+  #message{
+    font-size: 60px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  </style>
+</head>
+<body>
+
+  <!-- Animation for Message Here -->
+  <div id="message" class="fa"></div>
+
+  <script type="text/javascript">
+
+  // Open Message Animation
+  function openMessage() {
+    var envelope = document.getElementById('message');
+    envelope.innerHTML='&#xf0e0;';
+
+    setTimeout(function(){
+      envelope.innerHTML='&#xf2b6;';
+    },1000);
+  }
+
+  // Call Animation
+  openMessage();
+
+  // Set Animation for every 2 seconds
+  setInterval(openMessage,2000);
+  </script>
+</body>
+</html>
